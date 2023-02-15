@@ -1,0 +1,20 @@
+{
+    "name": "kausar94/hastech-academy",
+    "description": "A tutorial plugin for HasTech Academy",
+    "type": "wordpress-plugin",
+    "license": "GPLv2",
+    "autoload": {
+        "psr-4": {
+            "Kausar94\\HastechAcademy\\": "includes/"
+        },
+        "files": []
+    },
+    "authors": [
+        {
+            "name": "mamun94",
+            "email": "kausaralmamun94@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
