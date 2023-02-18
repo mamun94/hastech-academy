@@ -14,10 +14,20 @@ class Menu {
     }
 
     public function admin_menu(){
-        add_menu_page( __('HasTech Academy', 'hastech-academy'), __('Academy', 'hastech-academy'), 'manage_options', 'hastech-academy', [$this, 'plugin_page'], 'dashicons-welcome-learn-more' );
+        $parent_slug = 'hastech-academy';
+        $capability = 'manage_options';
+        
+        add_menu_page( __('HasTech Academy', 'hastech-academy'), __('Academy', 'hastech-academy'), $capability, $parent_slug, [$this, 'plugin_page'], 'dashicons-welcome-learn-more' );
+
+        add_submenu_page ( $parent_slug, __('Address Book', 'hastech-academy'), __('Address Book', 'hastech-academy'), $capability, 'hastech-academy-addressbook', [$this, 'addressbook_page']);
     }
 
     public function plugin_page(){
         echo "Hello World";
     }
+
+    public function addressbook_page(){
+        echo 'Hello Address Book';
+    }
+
 }
