@@ -77,11 +77,13 @@ final class HasTech_Academy{
      */
 
     public function init_plugin(){
+
         if(is_admin()){
             new Kausar94\HastechAcademy\Admin();
         }else{
             new Kausar94\HastechAcademy\Frontend();
         }
+        
     }
 
     /**
@@ -90,14 +92,8 @@ final class HasTech_Academy{
      * @return void
      */
     public function activate(){
-
-        $installed = get_option('hs_academy_installed');
-
-        if( !$installed ){
-            update_option('hs_academy_installed',time());
-        }
-
-        update_option('hs_academy_version', HS_ACADEMY_VERSION);
+        $installer = new \Kausar94\HastechAcademy\installer();
+        $installer->run();
     }
 
 }
