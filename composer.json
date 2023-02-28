@@ -7,7 +7,7 @@
         "psr-4": {
             "Kausar94\\HastechAcademy\\": "includes/"
         },
-        "files": []
+        "files": [ "includes/functions.php" ]
     },
     "authors": [
         {

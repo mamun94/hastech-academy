@@ -1,6 +1,7 @@
 <div class="wrap">
     <h1 class="wp-heading-inline"><?php _e('New Address', 'hastech-academy'); ?></h1>
     
+    
 
     <form action="" method="post">
         <table class="form-table">
